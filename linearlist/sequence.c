@@ -49,19 +49,20 @@ int Locate(SeqList l, DateType e) {
 }
 
 
-void InsertSeqList(SeqList *l, DateType x, int i) {
+void InsertSeqList(SeqList *l, DateType x, int index) {
     if (l->length == MAX_SIZE) {
         printf("表已满\n");
         exit(1);
     }
-    if (i < 1 || i > l->length+1) {
+    if (index < 1 || index > l->length+1) {
         printf("插入位置错误");
         exit(1);
     }
-    for (int j = l->length; j >= i; j--) {
+    for (int j = l->length; j >= index; j--) {
         l->data[j] = l->data[j-1];
     }
-    l->data[i-1] = x;
+
+    l->data[index-1] = x;
     l->length++;
 
 }

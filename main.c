@@ -13,6 +13,7 @@ int main() {
     Initiate(&l);
     InsertSeqList(&l, 1, 1);
     InsertSeqList(&l, 2, 2);
+    InsertSeqList(&l, 3, 2);
     Traverse(l);
 
     printf("%d\n", Locate(l, 5));
